@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/vagrant'
+let g:netrw_dirhist_2='/etc/php5/cli/conf.d'
+let g:netrw_dirhist_3='/etc/php5/cli'
+let g:netrw_dirhist_4='/etc/php5/cli/conf.d'
+let g:netrw_dirhist_5='/etc/php5/apache2/conf.d'
+let g:netrw_dirhist_6='/etc/php5/cli/conf.d'
+let g:netrw_dirhist_7='/home/vagrant'
