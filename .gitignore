@@ -10,5 +10,5 @@
 .vim/bundle/vim-snipmate/
 .vim/bundle/vim-snippets/
 .vim/bundle/Vundle.vim/
-.vim/bundle/Command-T/
+.vim/bundle/Command-T/*
 .vim/bundle/tlib_vim/
