@@ -1,11 +1,14 @@
 "重映射ESC为jk
-"inoremap jk <ESC>
+inoremap jk <ESC>
 
 execute pathogen#infect()
 
 filetype plugin indent on
 syntax on
 filetype on "文件类型自动检测
+
+"set omnifunc=phpcomplete#CompletePHP "设置自动补全
+"autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 set foldmethod=syntax "代码折叠
 
