@@ -29,5 +29,5 @@ let colors_name = "defaultconf"
 hi Pmenu ctermbg=white ctermfg=black
 "hi PmenuSbar ctermbg=blue
 "hi PmenuThumb ctermbg=blue
-hi PmenuSel ctermbg=lightgreen
+hi PmenuSel ctermbg=green
 " vim: sw=2

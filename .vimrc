@@ -14,6 +14,11 @@ nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <leader>p :!php -f %<CR>
 "按,l用lua执行当前文件
 nmap <leader>l :!lua %<CR>
+"按,y用python执行当前文件
+nmap <leader>y :!python %<CR>
+"}
+
+"插件快捷键{
 "}
 
 "重映射ESC为jk
@@ -27,10 +32,20 @@ set shortmess=atI       " 启动的时候不显示那个援助索马里儿童的
 set noswapfile
 set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
 
+"ctag {
+nmap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+"}
+
 "tagbar{
-"letg:tagbar_width=35
-"letg:tagbar_autofocus=1
-"nmap <F8> :TagbarToggle<CR>
+let g:tagbar_width=35
+let g:tagbar_autofocus=1
+nmap <F8> :TagbarToggle<CR>
+"}
+
+"taglist{
+let Tlist_Show_One_File=1  
+let Tlist_Exit_OnlyWindow=1 
+nmap <F7> :TlistToggle<CR>
 "}
 
 " cursor 突出显示{
@@ -83,17 +98,17 @@ map <C-l> <C-W>l
 
 "create undo file{
 if has('persistent_undo')
-  set undolevels=1000         " How many undos
-  set undoreload=10000        " number of lines to save for undo
-  set undofile                " So is persistent undo ...
-  set undodir=/tmp/vimundo/
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
+set undofile                " So is persistent undo ...
+set undodir=/tmp/vimundo/
 endif
 "}
 
 "设置主题 theme{
-"set background=dark
 set t_Co=256
 colorscheme defaultconf
+set background=light
 "}
 
 " 代码折叠{
@@ -111,13 +126,13 @@ set foldlevel=99
 let g:FoldMethod = 0
 map <leader>zz :call ToggleFold()<cr>
 fun! ToggleFold()
-    if g:FoldMethod == 0
-        exe "normal! zM"
-        let g:FoldMethod = 1
-    else
-        exe "normal! zR"
-        let g:FoldMethod = 0
-    endif
+if g:FoldMethod == 0
+    exe "normal! zM"
+    let g:FoldMethod = 1
+else
+    exe "normal! zR"
+    let g:FoldMethod = 0
+endif
 endfun
 "}
 
@@ -187,6 +202,8 @@ let g:Powerline_symbols = 'fancy'
 
 " NERDTree 设置{
 autocmd vimenter * NERDTree " 设置开启时加载
+map <F3> :NERDTreeMirror<CR>
+map <F3> :NERDTreeToggle<CR>
 "}
 
 " YCM 配置{
@@ -207,7 +224,39 @@ let g:SuperTabDefaultCompletionType='<c-x><c-u><c-p>'
 "}
 
 "indent{
-"let g:indent_guides_auto_colors = 2
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1 
+let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar', 'taglist'] "插件忽略列表
+"}
+
+"indentLine{
+let g:indentLine_enabled = 0
+"let g:indentLine_color_term = 239
+"let g:indentLine_char = '|'
+"}
+
+"EasyAlign{
+"Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+"Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+"}
+
+"ctrlP {
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+"nmap <leader>f :CtrlP<CR>
+"}
+
+"ultisnips{
+" Track the engine.  Plugin 'SirVer/ultisnips'
+
+"Snippets are separated from the engine. Add this if you want them: Plugin 'honza/vim-snippets'
+
+"Trigger configuration. Do not use <tab> if you use
+let g:UltiSnipsSnippetDirectories=['~/.vim/bundle/vim-snippets/UltiSnips']
+let g:UltiSnipsSnippetsDir = '~/.vim/bundle/ultisnips/mysnip' "自定义保存路径
+let g:UltiSnipsExpandTrigger="<leader><tab>"
+
+"If you want :UltiSnipsEdit to split your window.  let g:UltiSnipsEditSplit="vertical"
+
 "}
