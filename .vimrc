@@ -111,6 +111,11 @@ colorscheme defaultconf
 set background=light
 "}
 
+"molokai theme
+let g:molokai_original = 1
+let g:rehash256 = 1
+"}
+
 " 代码折叠{
 set foldenable
 " 折叠方法
@@ -187,6 +192,7 @@ set incsearch
 set ignorecase
 " 有一个或以上大写字母时仍大小写敏感
 set smartcase     " ignore case if search pattern is all lowercase, case-sensitive otherwise
+nmap <leader>h :nohlsearch<CR>
 "}
 
 "pathogen 插件配置{
