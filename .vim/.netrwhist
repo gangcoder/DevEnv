@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/vagrant/flightCheckin/CheckinServer/Controller'
 let g:netrw_dirhist_2='/home/vagrant/git/Accumulate/Lua'
 let g:netrw_dirhist_3='/home/vagrant/git/Accumulate/Lua/LuaOO'
 let g:netrw_dirhist_4='/home/vagrant/git/Accumulate/Lua'
 let g:netrw_dirhist_5='/home/vagrant/git/Accumulate/Language/Lua/LuaSocket'
+let g:netrw_dirhist_6='/home/vagrant/feeyowork'
+let g:netrw_dirhist_7='/home/vagrant/feeyowork/MQ'

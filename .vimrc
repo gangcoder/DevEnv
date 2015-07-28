@@ -30,7 +30,7 @@ filetype on "文件类型自动检测
 
 set shortmess=atI       " 启动的时候不显示那个援助索马里儿童的提示
 set noswapfile
-set wildignore=*.swp,*.bak,*.pyc,*.class,.svn
+set wildignore=*.bak,*.pyc,*.class,.svn
 
 "ctag {
 nmap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
@@ -266,3 +266,6 @@ let g:UltiSnipsExpandTrigger="<leader><tab>"
 "If you want :UltiSnipsEdit to split your window.  let g:UltiSnipsEditSplit="vertical"
 
 "}
+"markdown
+nmap <leader>n :Toc<CR>
+nmap <leader>f :TableFormat<CR>
