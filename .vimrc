@@ -9,6 +9,8 @@ nmap <leader>w :w<CR>
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 "}
 
+"vim输出沾满屏幕时不暂停
+set nomore
 "exec 配置快捷键执行当前文件{
 "按,p用PHP执行当前文件
 nmap <leader>p :!php -f %<CR>
@@ -110,6 +112,9 @@ set t_Co=256
 colorscheme defaultconf
 set background=light
 "}
+
+"设置字体 
+set guifont=Monospace\14
 
 "molokai theme
 let g:molokai_original = 1
