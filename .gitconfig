@@ -1,6 +1,6 @@
 [user]
-	email = xugang@feeyo.com
-	name = xugang
+	email = email
+	name = name
 [core]
 	editor = vim
 [color]
