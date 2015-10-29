@@ -1,0 +1,32 @@
+# 将功能键绑定为 C-x
+unbind C-b
+set -g prefix ^X
+bind a send-prefix
+
+set-option -g status on
+set-option -g status-utf8 on
+set-option -g status-justify "centre"
+#set -g default-terminal "screen-256color" # + "tmux -2" => 256 color
+set -g status-interval 15 # 15 sec refresh
+set -g display-time 3000
+
+set -g status-bg white
+set -g status-fg black
+set-window-option -g window-status-current-fg green 
+#set-window-option -g window-status-current-bg colour237 
+set -g status-left-length 40
+set -g status-right-length 60
+#set -g status-left "#[fg=white,bg=blue] > #S < #[default]|" # session-name
+set -g status-left "#[fg=red] > #S < #[default]|" # session-name
+set -g status-right "#[fg=red,bright][ #[fg=cyan]#H #[fg=red]]#[default] #[fg=yellow,bright]- %Y.%m.%d #[fg=green]%H:%M #[default]"
+
+# Remap window(pane?) navigation to vim
+# 用 vim 的方式在窗格间移动光标
+unbind-key j
+bind-key j select-pane -D
+unbind-key k
+bind-key k select-pane -U
+unbind-key h
+bind-key h select-pane -L
+unbind-key l
+bind-key l select-pane -R
