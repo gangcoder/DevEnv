@@ -9,7 +9,9 @@ filetype on "文件类型自动检测
 "autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 "colorscheme grb256 
-colorscheme evening
+"colorscheme evening
+highlight Pmenu guibg=DarkRed
+
 set foldmethod=syntax "代码折叠
 
 set encoding=utf-8 "设置字符集
@@ -47,3 +49,5 @@ set nocompatible
 set t_Co=256
 let g:Powerline_symbols = 'fancy'
 "}
+
+"autocmd vimenter * NERDTree " 设置开启时加载
