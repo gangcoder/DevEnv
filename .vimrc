@@ -53,7 +53,7 @@ nmap <F7> :TlistToggle<CR>
 
 " cursor 突出显示{
 "set cursorcolumn
-set cursorline          " 突出显示当前行
+"set cursorline          " 突出显示当前行
 "}
 
 "设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制
@@ -110,7 +110,7 @@ endif
 
 "设置主题 theme{
 set t_Co=256
-colorscheme defaultconf
+colorscheme darkburn
 set background=light
 "}
 
@@ -212,9 +212,7 @@ set t_Co=256
 let g:Powerline_symbols = 'fancy'
 "}
 
-<<<<<<< HEAD
 "autocmd vimenter * NERDTree " 设置开启时加载
-=======
 " NERDTree 设置{
 autocmd vimenter * NERDTree " 设置开启时加载
 map <F3> :NERDTreeMirror<CR>

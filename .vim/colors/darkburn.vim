@@ -10,7 +10,7 @@
 " Modified version of zenburn originally created by: 
 " Maintainer:   Jani Nurminen <slinky@iki.fi>
 " Last Change:  $Id: zenburn.vim,v 2.4 2008/11/18 20:43:18 slinky Exp $
-" URL:          http://slinky.imukuppi.org/zenburnpage/
+" URL:      	http://slinky.imukuppi.org/zenburnpage/
 " License:      GPL
 "=============================================================================
 "
